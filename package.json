@@ -1,0 +1,23 @@
+{
+  "name": "character-pdf-exporter",
+  "version": "1.0.0",
+  "description": "Export player characters from foundryVtt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j0nesma/character-pdf-exporter.git"
+  },
+  "keywords": [
+    "foundryVtt",
+    "PDF"
+  ],
+  "author": "Matthew Jones",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/j0nesma/character-pdf-exporter/issues"
+  },
+  "homepage": "https://github.com/j0nesma/character-pdf-exporter#readme"
+}
