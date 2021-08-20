@@ -1,63 +1,64 @@
+import {formTypes} from './Form.js';
 export const savingThrows = [
     {
         id: "ST Strength",
         pdfId: "ST Strength",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "ST Strength Prof",
         pdfId: "Check Box 11",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "ST Dexterity",
         pdfId: "ST Dexterity",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "ST Dexterity Prof",
         pdfId: "Check Box 18",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "ST Constitution",
         pdfId: "ST Constitution",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "ST Constitution Prof",
         pdfId: "Check Box 19",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "ST Intelligence",
         pdfId: "ST Intelligence",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "ST Intelligence Prof",
         pdfId: "Check Box 20",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "ST Wisdom",
         pdfId: "ST Wisdom",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "ST Wisdom Prof",
         pdfId: "Check Box 21",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "ST Charisma",
         pdfId: "ST Charisma",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "ST Charisma Prof",
         pdfId: "Check Box 22",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
 ];
 
@@ -65,62 +66,62 @@ export const attributes = [
     {
         id: "STR",
         pdfId: "STR",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "STR mod",
         pdfId: "STRmod",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "DEX",
         pdfId: "DEX",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "DEX mod",
         pdfId: "DEXmod ",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "CON",
         pdfId: "CON",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "CON mod",
         pdfId: "CONmod",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "INT",
         pdfId: "INT",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "INT mod",
         pdfId: "INTmod",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "WIS",
         pdfId: "WIS",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "WIS mod",
         pdfId: "WISmod",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "CHA",
         pdfId: "CHA",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "CHA mod",
         pdfId: "CHamod",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
 ]
 
@@ -128,52 +129,52 @@ export const weapons = [
     {
         id: "Weapon 1 Name",
         pdfId: "Wpn Name",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Weapon 1 Attack Bonus",
         pdfId: "Wpn1 AtkBonus",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Weapon 1 Damage",
         pdfId: "Wpn1 Damage",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Weapon 2 Name",
         pdfId: "Wpn Name 2",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Weapon 2 Attack Bonus",
         pdfId: "Wpn2 AtkBonus ",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Weapon 2 Damage",
         pdfId: "Wpn2 Damage ",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Weapon 3 Name",
         pdfId: "Wpn Name 3",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Weapon 3 Attack Bonus",
         pdfId: "Wpn3 AtkBonus  ",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Weapon 3 Damage",
         pdfId: "Wpn3 Damage ",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Attacks and Spellcasting",
         pdfId: "AttacksSpellcasting",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     }
 ]
 
@@ -181,182 +182,182 @@ export const skills = [
     {
         id: "Acrobatics",
         pdfId: "Acrobatics",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Acrobatics Prof",
         pdfId: "Check Box 23",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Animal Handling",
         pdfId: "Animal",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Animal Handling Prof",
         pdfId: "Check Box 24",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Arcana",
         pdfId: "Arcana",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Arcana Prof",
         pdfId: "Check Box 25",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Athletics",
         pdfId: "Athletics",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Athletics Prof",
         pdfId: "Check Box 26",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Deception",
         pdfId: "Deception ",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Deception Prof",
         pdfId: "Check Box 27",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "History",
         pdfId: "History ",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "History Prof",
         pdfId: "Check Box 28",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Insight",
         pdfId: "Insight",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Insight Prof",
         pdfId: "Check Box 29",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Intimidation",
         pdfId: "Intimidation",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Intimidation Prof",
         pdfId: "Check Box 30",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Investigation",
         pdfId: "Investigation ",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Investigation Prof",
         pdfId: "Check Box 31",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Medicine",
         pdfId: "Medicine",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Medicine Prof",
         pdfId: "Check Box 32",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Nature",
         pdfId: "Nature",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Nature Prof",
         pdfId: "Check Box 33",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Perception",
         pdfId: "Perception ",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Perception Prof",
         pdfId: "Check Box 34",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Performance",
         pdfId: "Performance",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Performance Prof",
         pdfId: "Check Box 35",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Persuasion",
         pdfId: "Persuasion",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Persuasion Prof",
         pdfId: "Check Box 36",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Religion",
         pdfId: "Religion",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Religion Prof",
         pdfId: "Check Box 37",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Sleight of Hand",
         pdfId: "SleightofHand",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Sleight of Hand Prof",
         pdfId: "Check Box 38",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Stealth",
         pdfId: "Stealth ",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Stealth Prof",
         pdfId: "Check Box 39",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "Survival",
         pdfId: "Survival",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Survival Prof",
         pdfId: "Check Box 40",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     }
 ]
 
@@ -364,110 +365,145 @@ export const header = [
     {
         id: "Level",
         pdfId: "ClassLevel",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Background",
         pdfId: "Background",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Player Name",
         pdfId: "PlayerName",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Character Name",
         pdfId: "CharacterName",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Race",
         pdfId: "Race ",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Alignment",
         pdfId: "Alignment",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "XP",
         pdfId: "XP",
-        type: "PDFTextField"
-    }
+        type: formTypes.TEXT
+    },
+    {
+        id: "Character Name",
+        pdfId: "CharacterName 2",
+        type: formTypes.TEXT
+    },
+    {
+        id: "Age",
+        pdfId: "Age",
+        type: formTypes.TEXT
+    },
+    {
+        id: "Height",
+        pdfId: "Height",
+        type: formTypes.TEXT
+    },
+    {
+        id: "Weight",
+        pdfId: "Weight",
+        type: formTypes.TEXT
+    },
+    {
+        id: "Eyes",
+        pdfId: "Eyes",
+        type: formTypes.TEXT
+    },
+    {
+        id: "Skin",
+        pdfId: "Skin",
+        type: formTypes.TEXT
+    },
+    {
+        id: "Hair",
+        pdfId: "Hair",
+        type: formTypes.TEXT
+    },
 ]
 
 export const characterStats = [
     {
         id: "AC",
         pdfId: "AC",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Initiative",
         pdfId: "Initiative",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Speed",
         pdfId: "Speed",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "HP Max",
         pdfId: "HPMax",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "HP Current",
         pdfId: "HPCurrent",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "HP Temp",
         pdfId: "HPTemp",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "HD Total",
         pdfId: "HDTotal",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Hit Dice",
         pdfId: "HD",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "DS success 1",
         pdfId: "Check Box 12",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "DS success 2",
         pdfId: "Check Box 13",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "DS success 3",
         pdfId: "Check Box 14",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "DS fail 1",
         pdfId: "Check Box 15",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "DS fail 2",
         pdfId: "Check Box 16",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     },
     {
         id: "DS fail 3",
         pdfId: "Check Box 17",
-        type: "PDFCheckBox"
+        type: formTypes.CHECKBOX
     }
 ]
 
@@ -475,22 +511,22 @@ export const backstory = [
     {
         id: "Ideals",
         pdfId: "Ideals",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Bonds",
         pdfId: "Bonds",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Personality Traits",
         pdfId: "PersonalityTraits ",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Flaws",
         pdfId: "Flaws",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     }
 ]
 
@@ -498,50 +534,97 @@ export const money = [
     {
         id: "Copper",
         pdfId: "CP",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Silver",
         pdfId: "SP",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Electrum",
         pdfId: "EP",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Gold",
         pdfId: "GP",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Platinum",
         pdfId: "PP",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
 ]
 
+export const fractionAndAllies = [
+    {
+        id: "Faction Symbol Image",
+        pdfId: "Faction Symbol Image",
+        type: formTypes.IMAGE
+    },
+    {
+        id: "Allies",
+        pdfId: "Allies",
+        type: formTypes.TEXT
+    },
+    {
+        id: "FactionName",
+        pdfId: "FactionName",
+        type: formTypes.TEXT
+    },
+    {
+        id: "Backstory",
+        pdfId: "Backstory",
+        type: formTypes.TEXT
+    },
+    {
+        id: "Features and Traits",
+        pdfId: "Feat+Traits",
+        type: formTypes.TEXT
+    },
+    {
+        id: "Treasure",
+        pdfId: "Treasure",
+        type: formTypes.TEXT
+    },
+]
 export const fields = [
     {
         id: "Inspiration",
         pdfId: "Inspiration",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Prof Bonus",
         pdfId: "ProfBonus",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Passive Perception",
         pdfId: "Passive",
-        type: "PDFTextField"
+        type: formTypes.TEXT
     },
     {
         id: "Other Proficiencies and Languages",
         pdfId: "ProficienciesLang",
-        type: "PDFTextField"
+        type: formTypes.TEXT
+    },
+    {
+        id: "Features and Traits",
+        pdfId: "Features and Traits",
+        type: formTypes.TEXT
+    },
+    {
+        id: "Equipment",
+        pdfId: "Equipment",
+        type: formTypes.TEXT
+    },
+    {
+        id: "Character Image",
+        pdfId: "CHARACTER IMAGE",
+        type: formTypes.IMAGE
     }
 ].concat(
     header,
@@ -551,6 +634,7 @@ export const fields = [
     attributes,
     skills,
     money,
-    weapons);
+    weapons,
+    fractionAndAllies);
 
 export default { fields };

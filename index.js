@@ -47,6 +47,9 @@ function populateForm(form) {
                 checkbox.check();
                 break;
             }
+            case formTypes.IMAGE: {
+                const image = form.getButton(fields[i].pdfId);
+            }
         }
         
     }

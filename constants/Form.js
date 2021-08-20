@@ -1,6 +1,7 @@
 export const formTypes = {
     TEXT: "PDFTextField",
-    CHECKBOX: "PDFCheckBox"
+    CHECKBOX: "PDFCheckBox",
+    IMAGE: "PDFButton"
 }
 
 
