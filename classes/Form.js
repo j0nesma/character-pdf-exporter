@@ -4,7 +4,4 @@ export const formTypes = {
     IMAGE: "PDFButton"
 }
 
-
-
-
 export default { formTypes };
