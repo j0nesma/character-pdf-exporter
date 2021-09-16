@@ -1,7 +1,8 @@
 import {formTypes} from './Form.js';
 import * as foundryPlayer from './FoundryPlayer.js';
 import * as fiveEHelper from './5eHelper.js';
-import * as dataRetriever from './DataRetriever.js'
+import * as dataRetriever from './DataRetriever.js';
+import spells from './spells/spells.js';
 
 export const savingThrows = [
     {
@@ -539,41 +540,26 @@ export const header = [
         foundryPlayer: foundryPlayer.xp
     },
     {
-        id: "Character Name",
-        pdfId: "CharacterName 2",
+        id: "Spellcasting Class",
+        pdfId: "Spellcasting Class 2",
+        type: formTypes.TEXT
+    },
+    {
+        id: "Spellcasting Ability",
+        pdfId: "SpellcastingAbility 2",
         type: formTypes.TEXT,
-        foundryPlayer: foundryPlayer.playerName
+        foundryPlayer: foundryPlayer.spellcastingAbility
     },
     {
-        id: "Age",
-        pdfId: "Age",
+        id: "Spell Save DC",
+        pdfId: "SpellSaveDC  2",
         type: formTypes.TEXT
     },
     {
-        id: "Height",
-        pdfId: "Height",
+        id: "Spell Attack Bonus",
+        pdfId: "SpellAtkBonus 2",
         type: formTypes.TEXT
-    },
-    {
-        id: "Weight",
-        pdfId: "Weight",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Eyes",
-        pdfId: "Eyes",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Skin",
-        pdfId: "Skin",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Hair",
-        pdfId: "Hair",
-        type: formTypes.TEXT
-    },
+    }
 ]
 
 export const characterStats = [
@@ -686,60 +672,32 @@ export const money = [
     {
         id: "Copper",
         pdfId: "CP",
-        type: formTypes.TEXT
+        type: formTypes.TEXT,
+        foundryPlayer: foundryPlayer.money.cp
     },
     {
         id: "Silver",
         pdfId: "SP",
-        type: formTypes.TEXT
+        type: formTypes.TEXT,
+        foundryPlayer: foundryPlayer.money.sp
     },
     {
         id: "Electrum",
         pdfId: "EP",
-        type: formTypes.TEXT
+        type: formTypes.TEXT,
+        foundryPlayer: foundryPlayer.money.ep
     },
     {
         id: "Gold",
         pdfId: "GP",
-        type: formTypes.TEXT
+        type: formTypes.TEXT,
+        foundryPlayer: foundryPlayer.money.gp
     },
     {
         id: "Platinum",
         pdfId: "PP",
-        type: formTypes.TEXT
-    },
-]
-
-export const fractionAndAllies = [
-    {
-        id: "Faction Symbol Image",
-        pdfId: "Faction Symbol Image",
-        type: formTypes.IMAGE
-    },
-    {
-        id: "Allies",
-        pdfId: "Allies",
-        type: formTypes.TEXT
-    },
-    {
-        id: "FactionName",
-        pdfId: "FactionName",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Backstory",
-        pdfId: "Backstory",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Features and Traits",
-        pdfId: "Feat+Traits",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Treasure",
-        pdfId: "Treasure",
-        type: formTypes.TEXT
+        type: formTypes.TEXT,
+        foundryPlayer: foundryPlayer.money.pp
     },
 ]
 export const fields = [
@@ -774,11 +732,6 @@ export const fields = [
         id: "Equipment",
         pdfId: "Equipment",
         type: formTypes.TEXT
-    },
-    {
-        id: "Character Image",
-        pdfId: "CHARACTER IMAGE",
-        type: formTypes.IMAGE
     }
 ].concat(
     header,
@@ -789,6 +742,6 @@ export const fields = [
     skills,
     money,
     weapons,
-    fractionAndAllies);
+    spells);
 
 export default { fields, header };

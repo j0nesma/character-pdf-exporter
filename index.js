@@ -1,4 +1,4 @@
-import { PDFDocument } from "pdf-lib";
+import { PDFDocument, TextAlignment } from "pdf-lib";
 import { readFile, writeFile } from "fs";
 import { fields, header } from './classes/CharacterSheet.js';
 import { formTypes } from './classes/Form.js';
@@ -30,8 +30,6 @@ function listAllFieldsInForm(form) {
     form.getFields().forEach(id => {
         const type = id.constructor.name;
         const name = id.getName();
-        // console.log(id)
-
         console.log(`${type}: ${name}`)
     })
 }
@@ -66,17 +64,19 @@ function populateField(formField, fieldTemplate, player) {
     if (fieldTemplate.foundryPlayer) {
         value = dataRetriever.getDataFromPlayer(player, fieldTemplate.foundryPlayer)
     }
+
+    if(typeof value === "number"){
+        value = value.toString();
+    }
+
     if (value) {
         switch (fieldTemplate.type) {
             case formTypes.TEXT: {
-                if(typeof value === "NaN") {
-                    console.log("NAN VALUE");
-                    console.log("fieldTemplate.foundryPlayer")
-                } else if (typeof value === "number") {
-                    formField.setText(value.toString());
-                } else {
-                    formField.setText(value);
+                formField.setText(value);
+                if(fieldTemplate.alignLeft){
+                    formField.setAlignment(TextAlignment.Left);
                 }
+                
                 break;
             }
             case formTypes.CHECKBOX: {
@@ -85,9 +85,6 @@ function populateField(formField, fieldTemplate, player) {
                 }
                 break;
             }
-    //         case formTypes.IMAGE: {
-    //             const image = form.getButton(header[i].pdfId);
-    //         }
         }
     }
-}
+    }

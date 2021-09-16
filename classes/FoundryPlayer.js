@@ -108,6 +108,52 @@ export const skills = {
     
 }
 
+export const spells = {
+    lvl1: {
+        value: "data.spells.spell1.value",
+        max: "data.spells.spell1.max"
+    },
+    lvl2: {
+        value: "data.spells.spell2.value",
+        max: "data.spells.spell2.max"
+    },
+    lvl3: {
+        value: "data.spells.spell3.value",
+        max: "data.spells.spell3.max"
+    },
+    lvl4: {
+        value: "data.spells.spell4.value",
+        max: "data.spells.spell4.max"
+    },
+    lvl5: {
+        value: "data.spells.spell5.value",
+        max: "data.spells.spell5.max"
+    },
+    lvl6: {
+        value: "data.spells.spell6.value",
+        max: "data.spells.spell6.max"
+    },
+    lvl7: {
+        value: "data.spells.spell7.value",
+        max: "data.spells.spell7.max"
+    },
+    lvl8: {
+        value: "data.spells.spell8.value",
+        max: "data.spells.spell8.max"
+    },
+    lvl9: {
+        value: "data.spells.spell9.value",
+        max: "data.spells.spell9.max"
+    }
+}
+
+export const money = {
+    "pp": "data.currency.pp",
+    "gp": "data.currency.gp",
+    "ep": "data.currency.ep",
+    "sp": "data.currency.sp",
+    "cp": "data.currency.cp"
+}
 export const playerName = "name";
 export const background = "data.details.background";
 export const classType = "data.classes";
@@ -122,3 +168,5 @@ export const hpCurrent = "data.attributes.hp.value";
 export const hpTemp = "data.attributes.hp.temp";
 export const hitDice = "data.attributes.hd";
 export const proficiency = "data.attributes.prof";
+export const spellcastingAbility = "data.attributes.spellcasting"
+export const items = "items";
