@@ -3,6 +3,8 @@ import * as foundryPlayer from './FoundryPlayer.js';
 import * as fiveEHelper from './5eHelper.js';
 import * as dataRetriever from './DataRetriever.js';
 import spells from './spells/spells.js';
+import { weapons } from './weapons/weapons.js';
+import { WEAPON_PROF } from './weapons/weaponProficiences.js';
 
 export const savingThrows = [
     {
@@ -223,59 +225,6 @@ export const attributes = [
             return fiveEHelper.calculateFormattedModifier(dataRetriever.getDataFromPlayer(player, foundryPlayer.attributes.CHARISMA.value));
         }
     },
-]
-
-export const weapons = [
-    {
-        id: "Weapon 1 Name",
-        pdfId: "Wpn Name",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Weapon 1 Attack Bonus",
-        pdfId: "Wpn1 AtkBonus",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Weapon 1 Damage",
-        pdfId: "Wpn1 Damage",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Weapon 2 Name",
-        pdfId: "Wpn Name 2",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Weapon 2 Attack Bonus",
-        pdfId: "Wpn2 AtkBonus ",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Weapon 2 Damage",
-        pdfId: "Wpn2 Damage ",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Weapon 3 Name",
-        pdfId: "Wpn Name 3",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Weapon 3 Attack Bonus",
-        pdfId: "Wpn3 AtkBonus  ",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Weapon 3 Damage",
-        pdfId: "Wpn3 Damage ",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Attacks and Spellcasting",
-        pdfId: "AttacksSpellcasting",
-        type: formTypes.TEXT
-    }
 ]
 
 export const skills = [
@@ -538,27 +487,6 @@ export const header = [
         pdfId: "XP",
         type: formTypes.TEXT,
         foundryPlayer: foundryPlayer.xp
-    },
-    {
-        id: "Spellcasting Class",
-        pdfId: "Spellcasting Class 2",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Spellcasting Ability",
-        pdfId: "SpellcastingAbility 2",
-        type: formTypes.TEXT,
-        foundryPlayer: foundryPlayer.spellcastingAbility
-    },
-    {
-        id: "Spell Save DC",
-        pdfId: "SpellSaveDC  2",
-        type: formTypes.TEXT
-    },
-    {
-        id: "Spell Attack Bonus",
-        pdfId: "SpellAtkBonus 2",
-        type: formTypes.TEXT
     }
 ]
 
@@ -580,7 +508,7 @@ export const characterStats = [
         id: "Speed",
         pdfId: "Speed",
         type: formTypes.TEXT,
-        foundryPlayer: foundryPlayer.speed
+        calculateValue: (player) => {return dataRetriever.getDataFromPlayer(player, foundryPlayer.speed) + "ft"} 
     },
     {
         id: "HP Max",
@@ -591,14 +519,12 @@ export const characterStats = [
     {
         id: "HP Current",
         pdfId: "HPCurrent",
-        type: formTypes.TEXT,
-        foundryPlayer: foundryPlayer.hpCurrent
+        type: formTypes.TEXT
     },
     {
         id: "HP Temp",
         pdfId: "HPTemp",
-        type: formTypes.TEXT,
-        foundryPlayer: foundryPlayer.hpTemp
+        type: formTypes.TEXT
     },
     {
         id: "HD Total",
@@ -609,10 +535,8 @@ export const characterStats = [
     {
         id: "Hit Dice",
         pdfId: "HD",
-        type: formTypes.TEXT,
-        foundryPlayer: foundryPlayer.hitDice
+        type: formTypes.TEXT
     },
-    //TODO FORMULATION
     {
         id: "DS success 1",
         pdfId: "Check Box 12",
@@ -721,17 +645,39 @@ export const fields = [
     {
         id: "Other Proficiencies and Languages",
         pdfId: "ProficienciesLang",
-        type: formTypes.TEXT
+        type: formTypes.TEXT,
+        calculateValue: (player) => {
+            let text = "LANGUAGES \n";
+            let languages = dataRetriever.getDataFromPlayer(player, foundryPlayer.languages);
+            languages.forEach((el) => text += el +"\n");
+            text += "\n";
+            text += "WEAPON PROFICIENCIES \n"
+            let weaponProf = dataRetriever.getDataFromPlayer(player, foundryPlayer.weaponProf);
+            weaponProf.forEach((el) => text += WEAPON_PROF[el] +"\n");
+            return text;
+        }
     },
     {
         id: "Features and Traits",
         pdfId: "Features and Traits",
-        type: formTypes.TEXT
+        type: formTypes.TEXT,
+        calculateValue: (player) => {
+            let text = "";
+            let features = dataRetriever.getDataFromPlayer(player, foundryPlayer.items).filter((el)=> {return el.type === "feat"});
+            features.forEach((el) => text += el.name+"\n");
+            return text;
+        }
     },
     {
         id: "Equipment",
         pdfId: "Equipment",
-        type: formTypes.TEXT
+        type: formTypes.TEXT,
+        calculateValue: (player) => {
+            let text = "";
+            let equipment = dataRetriever.getDataFromPlayer(player, foundryPlayer.items).filter((el)=> {return el.type === "equipment"});
+            equipment.forEach((el) => text += el.name+"\n");
+            return text;
+        }
     }
 ].concat(
     header,

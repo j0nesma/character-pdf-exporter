@@ -22,3 +22,7 @@ function formatNumber(value) {
         return value;
     }
 }
+
+export function calculateSpellDC(modifier, proficiency) {
+    return 8 + modifier + proficiency
+}

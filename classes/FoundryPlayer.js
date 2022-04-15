@@ -170,3 +170,5 @@ export const hitDice = "data.attributes.hd";
 export const proficiency = "data.attributes.prof";
 export const spellcastingAbility = "data.attributes.spellcasting"
 export const items = "items";
+export const languages = "data.traits.languages.value";
+export const weaponProf = "data.traits.weaponProf.value";

@@ -2,7 +2,7 @@ import { PDFDocument, TextAlignment } from "pdf-lib";
 import { readFile, writeFile } from "fs";
 import { fields, header } from './classes/CharacterSheet.js';
 import { formTypes } from './classes/Form.js';
-import { playerTest } from './test/exampleCharacter.js';
+import { playerTest } from './test/exampleCharacter2.js';
 import * as dataRetriever from './classes/DataRetriever.js'
 const sourcePDFPath = "test/5E_CharacterSheet_Fillable.pdf";
 
@@ -39,6 +39,7 @@ function populateForm(form) {
         switch (fields[i].type) {
             case formTypes.TEXT: {
                 const textField = form.getTextField(fields[i].pdfId);
+                console.log("textField = ", fields[i].pdfId);
                 populateField(textField, fields[i])
                 break;
             }
@@ -58,6 +59,8 @@ function populateForm(form) {
 function populateField(formField, fieldTemplate, player) {
     var player = playerTest;
     let value;
+
+    //TODO CHANGE THIS TO ONE THING
     if (fieldTemplate.calculateValue) {
         value = fieldTemplate.calculateValue(player);
     }
@@ -72,6 +75,7 @@ function populateField(formField, fieldTemplate, player) {
     if (value) {
         switch (fieldTemplate.type) {
             case formTypes.TEXT: {
+                console.log("value = ", value);
                 formField.setText(value);
                 if(fieldTemplate.alignLeft){
                     formField.setAlignment(TextAlignment.Left);

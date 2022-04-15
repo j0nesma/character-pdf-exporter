@@ -1,0 +1,15 @@
+export const DAMAGE_TYPES = {
+    "acid": "ACD",
+    "bludgeoning" : "BLG",
+    "cold": "CLD",
+    "fire": "FIR",
+    "force": "FRC",
+    "lightning": "LTG",
+    "necrotic": "NEC",
+    "piercing": "PRC",
+    "poison": "POI",
+    "psychic": "PSY",
+    "radiant": "RAD",
+    "slashing": "SLS",
+    "thunder": "THU",
+};
